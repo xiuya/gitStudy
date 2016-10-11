@@ -1,2 +1,2 @@
 # gitStudy
-This i study git nots.
+This i study git notes.
