@@ -1,8 +1,8 @@
 #常用git命令
+
 mkdir   创建一个目录
 
 pwd  显示当前目录
-
 
 git init  把目录变成git可以管理的仓库
 
@@ -18,6 +18,10 @@ git log   显示从最近到最远的提交日志（如果觉得信息太多就加上 --pretty=oneline 参
 
 
 git cat readme.txt  查看内容
+
+git remote  查看远程库的信息 
+
+git remote -v显示更详细的信息
 
 
 #版本回退
@@ -119,6 +123,7 @@ git cat readme.txt  查看内容
 	创建+切换分支：git checkout -b <name>
 
 	合并某分支到当前分支：git merge <name>
+
 	合并分支时，如果可能，Git会用Fast forward模式，但这种模式下，删除分支后，会丢掉分支信息。
 	如果要强制禁用Fast forward模式，Git就会在merge时生成一个新的commit，这样，从分支历史上就可以看出分支信息。
 	合并分支，请注意--no-ff参数，表示禁用Fast forward
@@ -127,3 +132,14 @@ git cat readme.txt  查看内容
 	删除分支：git branch -d <name>
 
 	git log --graph命令可以看到分支合并图。
+
+
+#BUG修复
+
+	git stash  把工作区域储藏起来，等以后恢复现场后继续工作。
+
+	git stash list  查看储藏的工作区
+
+	修复bug时，我们会通过创建新的bug分支进行修复，然后合并，最后删除；
+
+	当手头工作没有完成时，先把工作现场git stash一下，然后去修复bug，修复后，再git stash pop，回到工作现场。
